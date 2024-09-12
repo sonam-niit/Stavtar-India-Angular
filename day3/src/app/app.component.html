@@ -1,0 +1,23 @@
+<!-- <app-register></app-register> -->
+ <!-- <app-pipes></app-pipes> -->
+
+ <!-- <app-reader></app-reader>
+ <app-userlist></app-userlist> -->
+ <ul class="nav justify-content-center">
+    <li class="nav-item">
+      <a class="nav-link active" routerLink="list">Product List</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" routerLink="form">Product Form</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" routerLink="dashboard">Dashboard</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" routerLink="customer">Customer</a>
+    </li>
+    <li class="nav-item" *ngIf="loggedIn">
+      <button class="nav-link" (click)="logout()">logout</button>
+    </li>
+  </ul>
+<router-outlet></router-outlet>

@@ -1,3 +1,20 @@
-<div class="container-fluid">
+<!-- <div class="container-fluid">
   <app-header></app-header>
-</div>
+</div> -->
+<!-- <app-data-binding></app-data-binding> -->
+ <!-- <app-directive></app-directive> -->
+
+ <!-- <div class="container">
+  <app-ems></app-ems>
+   <app-todoapp></app-todoapp>
+ </div> -->
+ <div class="container" style="border:2px solid red;">
+  <h3 class="p-3">Parent Component</h3>
+  <input type="text" #pdata (keyup)="0">
+
+  <app-child [data]="pdata.value"></app-child>
+ </div>
+
+ <!-- <input #inputData placeholder="Enter Your data"/>
+ <app-child></app-child> -->
+ <!-- <app-demoviewchild></app-demoviewchild> -->

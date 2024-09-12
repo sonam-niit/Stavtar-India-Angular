@@ -1,0 +1,45 @@
+<div class="container">
+    <h3>Registeration Form</h3>
+    <form [formGroup]="registerForm" (ngSubmit)="handleSubmit()">
+
+        <div class="form-group mt-3">
+            <label>First Name</label>
+            <input type="text" placeholder="Enter First Name" formControlName="firstName"
+            [ngClass]="{'is-invalid':submitted && form['firstName'].errors}" 
+            class="form-control"/>
+
+            <div *ngIf="submitted && form['firstName'].errors" 
+            class="invalid-feedback">
+                FirstName cannot be Empty
+            </div>
+        </div>
+        <div class="form-group mt-3">
+            <label>Last Name</label>
+            <input type="text" placeholder="Enter Last Name" formControlName="lastName"
+            [ngClass]="{'is-invalid':submitted && form['lastName'].errors}" 
+            class="form-control"/>
+
+            <div *ngIf="submitted && form['lastName'].errors" 
+            class="invalid-feedback">
+                lastName cannot be Empty
+            </div>
+        </div>
+        <div class="form-group mt-3">
+            <label>Email Id</label>
+            <input type="email" placeholder="Enter EmailId" formControlName="email"
+            [ngClass]="{'is-invalid':submitted && form['email'].errors}" 
+            class="form-control"/>
+
+            <div *ngIf="submitted && form['email'].errors" class="invalid-feedback">
+                <div *ngIf="form['email'].errors['required']">
+                    Email cannot be Empty
+                </div>
+                <div *ngIf="form['email'].errors['email']">
+                    Invalid EmailId
+                </div>
+            </div>
+        </div>
+
+        <button type="submit" class="btn btn-primary mt-3" >Register</button>
+    </form>
+</div>

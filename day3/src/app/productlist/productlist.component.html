@@ -1,0 +1,21 @@
+<div class="container">
+    <h3>Products List</h3>
+    <table class="table table-striped table-bordered">
+        <thead>
+            <tr>
+                <th>Name</th><th>Price</th><th>Description</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let p of products">
+                <td>{{p.name}}</td>
+                <td>{{p.price}}</td>
+                <td>{{p.description}}</td>
+                <td>
+                    <button class="btn btn-success" 
+                    (click)="details(p.id)">view</button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>

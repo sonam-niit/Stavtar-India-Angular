@@ -1,0 +1,30 @@
+<h3 *ngIf="flag">My Heading</h3>
+<button (click)="change()">{{flag?'Hide':'Show'}}</button>
+<table class="table table-striped table-bordered">
+    <thead>
+        <tr>
+            <th>ID</th><th>Name</th>
+            <th>Email</th><th>Country</th>
+        </tr>
+    </thead>
+    <tbody>
+        <!-- <tr *ngFor="let s of students" [style.color]="s.per>=35?'green':'red'"> -->
+        <tr *ngFor="let s of students"
+        [ngClass]="{'table-success': s.per>=35,'table-danger': s.per<35 }">
+            <td>{{s.id}}</td>
+            <td>{{s.name}}</td>
+            <td>{{s.email}}</td>
+            <td>{{s.country}}</td>
+        </tr>
+    </tbody>
+</table>
+<input type="number" [(ngModel)]="input" placeholder="Enter any number">
+<div [ngSwitch]="input">
+    <p *ngSwitchCase="1">Today is Sunday</p>
+    <p *ngSwitchCase="2">Today is Monday</p>
+    <p *ngSwitchCase="3">Today is Tuesday</p>
+    <p *ngSwitchCase="4">Today is Wednesday</p>
+    <p *ngSwitchCase="5">Today is Thursday</p>
+    <p *ngSwitchCase="6">Today is Friday</p>
+    <p *ngSwitchCase="7">Today is Saturday</p>
+</div>

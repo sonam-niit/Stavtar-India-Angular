@@ -1,0 +1,14 @@
+<div>
+    <h3>Pipes Demo</h3><hr>
+    <h4>Welcome {{name | uppercase}}</h4>
+    <h4>Welcome {{name | lowercase}}</h4>
+    <h4>Pi: {{pi | number: '1.5-5'}}</h4>
+    <h4>Pi: {{pi | number: '.10-10'}}</h4>
+    <h4>Pi: {{salary | currency: 'USD':true:'.2-2'}}</h4>
+    <h4>{{today | date: 'short'}}</h4>
+    <h4>{{today | date: 'medium'}}</h4>
+    <h4>{{today | date: 'long'}}</h4>
+    <h4>{{today | date: 'dd/MM/yyyy'}}</h4>
+    <h4>{{obj | json}}</h4>
+    <h4>{{message | changeString:'_'}}</h4>
+</div>

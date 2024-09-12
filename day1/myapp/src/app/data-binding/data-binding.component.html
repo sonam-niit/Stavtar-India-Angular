@@ -1,0 +1,23 @@
+<h3>Data Binding-Interpolation</h3>
+<hr>
+<p>Welcome {{name}}</p>
+<h3>Data Binding-Property binding</h3>
+<hr>
+<img [src]="imgUrl" [height]="height"
+[alt]="name" />
+<h3>Data Binding-Event binding</h3>
+<hr>
+<button (click)="onClick()"
+[class.active]="isActive">Click me!!</button>
+<h3>Data Binding-Two Way binding</h3>
+<hr>
+<p>{{message}}</p>
+<input type="text" [(ngModel)]="message"
+placeholder="Enter Your Message"/>
+<h3>[ngClass]demo</h3>
+<button
+[ngClass]="{'active':isActive,'highlight':isHighlight}"
+(click)="trigger()"
+> My Profile</button>
+
+<p [style.background-color]="isActive?'green':'red'">Message</p>

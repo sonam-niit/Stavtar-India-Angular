@@ -1,0 +1,11 @@
+<input type="text" [(ngModel)]="task" placeholder="Enter Your Task" 
+class="form-control mt-3"/>
+<button (click)="saveTask()" class="btn btn-primary mt-3">Add Task</button>
+
+<ul class="list-group mt-3">
+    <li *ngFor="let t of todos" class="list-group-item">
+        {{t.task}} -- status -- {{t.status}}
+        <button class="btn btn-success float-end" (click)="onupdate(t.id)">update</button>
+        <button class="btn btn-danger float-end me-2" (click)="ondelete(t.id)">X</button>
+    </li>
+</ul>
